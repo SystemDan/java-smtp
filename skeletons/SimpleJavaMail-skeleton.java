@@ -1,7 +1,6 @@
 import org.simplejavamail.email.Email;
 import org.simplejavamail.email.EmailBuilder;
 import org.simplejavamail.mailer.MailerBuilder;
-import org.simplejavamail.mailer.config.TransportStrategy;
 
 public class SimpleJavaMail {
 
