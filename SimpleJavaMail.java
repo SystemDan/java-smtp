@@ -38,5 +38,13 @@ public class SimpleJavaMail {
 	MailerBuilder.withSMTPServer("smtp.gmail.com", 25, SYSTEM_EMAIL, PASSWORD)
 	    .buildMailer()
 	    .sendMail(e);
+	    
+	   /*
+	   * If we want to allow for asynchronous sending so that our applet
+	   * does not freeze, we can pass an additional argument into .sendMail().
+	   *
+	   * We would pass true as the second argument so using the example above,
+	   * we would use .sendMail(e, true)
+	   */
     }
 }
