@@ -11,11 +11,14 @@ public class SimpleJavaMail {
     final static String PASSWORD = "some password";
     
     public static void main(String[] args) {
-	String email, subject, body;
+	String email, subject, body, name;
 	Scanner keyboard = new Scanner(System.in);
 	
 	System.out.print("Enter email: ");
 	email = keyboard.nextLine();
+	    
+	System.out.print("Enter name: ");
+	name = keyboard.nextLine();
 	
 	System.out.print("Enter subject: ");
 	subject = keyboard.nextLine();
@@ -24,13 +27,13 @@ public class SimpleJavaMail {
 	body = keyboard.nextLine();
 	keyboard.close();
 	
-	sendMail(email, subject, body);
+	sendMail(email, subject, body, name);
     }
     
-    public static void sendMail(String email, String subject, String body) {
+    public static void sendMail(String email, String subject, String body, String name) {
 	Email e = EmailBuilder.startingBlank()
 	    .from(SYSTEM_NAME, SYSTEM_EMAIL)
-	    .to(email, email)
+	    .to(name, email)
 	    .withSubject(subject)
 	    .withPlainText(body)
 	    .buildEmail();
